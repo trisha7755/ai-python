@@ -1,5 +1,5 @@
 # ai-python
-###Welcome to the AI-Python GitHub repository! This repository is designed to serve as a comprehensive resource for anyone interested in learning and developing Artificial Intelligence (AI) solutions using Python. Whether you are a beginner looking to explore the basics of AI or an experienced developer aiming to build advanced AI models, this repository provides a variety of projects, tutorials, and code examples to help you along your journey.
+### Welcome to the AI-Python GitHub repository! This repository is designed to serve as a comprehensive resource for anyone interested in learning and developing Artificial Intelligence (AI) solutions using Python. Whether you are a beginner looking to explore the basics of AI or an experienced developer aiming to build advanced AI models, this repository provides a variety of projects, tutorials, and code examples to help you along your journey.
 
 #What You'll Find in This Repository
 Basic AI Projects: Get started with simple AI programs, such as chatbots and basic data analysis, to understand fundamental AI concepts and Python programming techniques.
