@@ -58,3 +58,33 @@ END - Read File - remote
 '''
 
 print("End of Computer Vision quickstart.")
+
+
+
+
++++++++++++++++++++++++
+Env Setup Code
+++++++++++++++++++++++
+
+    sudo su -
+     apt-get update
+    2  mkdir application
+    3  cd application/
+    4  ls -l
+    5  pip install --upgrade azure-cognitiveservices-vision-computervision
+    6  apt install python3-pip
+    7  pip install --upgrade azure-cognitiveservices-vision-computervision
+    8  apt install python3-venv -y
+    9  python3 -m venv myenv
+   10  source myenv/bin/activate
+   11  pip install --upgrade pip
+   12  pip install --upgrade azure-cognitiveservices-vision-computervision
+   13  pip install pillow
+   14  code app.py
+   15  nano app.py
+   16  ls -l
+   17  cd myenv/
+   18  ls -l
+   19  cd ..
+   20  ls -l
+   21  python app.py
