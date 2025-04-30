@@ -1,3 +1,4 @@
+import os
 # This example requires environment variables named "LANGUAGE_KEY" and "LANGUAGE_ENDPOINT"
 language_key = os.environ.get('LANGUAGE_KEY')
 language_endpoint = os.environ.get('LANGUAGE_ENDPOINT')
