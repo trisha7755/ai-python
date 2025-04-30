@@ -28,3 +28,25 @@ try:
             
 except Exception as ex:
     print(str(ex))
+
+
+
+#########################
+List of Commands
+#########################
+
+apt-get update
+mkdir application
+cd application
+apt install python3-pip
+python3 -m venv myenv
+source myenv/bin/activate
+pip install azure-cognitiveservices-speech
+nano app.py
+curl -L https://aka.ms/ShakespeareWAV -o Shakespeare.wav
+ls -l
+python app.py
+
+
+
+
