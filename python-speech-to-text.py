@@ -46,6 +46,8 @@ nano app.py
 curl -L https://aka.ms/ShakespeareWAV -o Shakespeare.wav
 ls -l
 python app.py
+ls -l
+cat Shakespeare.txt
 
 
 
