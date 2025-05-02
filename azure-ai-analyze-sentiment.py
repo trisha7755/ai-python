@@ -15,7 +15,7 @@ def authenticate_client():
 
 def sentiment_analysis_example(client):
     documents = [
-        "I had the best day of my life. I wish you were there with me.",
+        "I had the best day of my life. I wish my friends were there with me.",
         "This was a waste of my time. The speaker put me to sleep.",
         "No complaints."
     ]
