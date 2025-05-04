@@ -66,7 +66,7 @@ from azure.core.credentials import AzureKeyCredential
 
 def authenticate_client():
     """Authenticate the client using your key and endpoint"""
-    ta_credential = AzureKeyCredential("egAQuq3uPZxl6QXjYtXWcZk6fvIwfeSCyUXz30960Wg7uz8QTiQaJQQJ99BEACYeBjFXJ3w3AAAAACOGAv6E")
+    ta_credential = AzureKeyCredential("egAQXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXv6E")
     text_analytics_client = TextAnalyticsClient(
         endpoint="https://hub11623521841.cognitiveservices.azure.com/",
         credential=ta_credential
