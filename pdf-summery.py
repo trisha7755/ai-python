@@ -14,6 +14,7 @@ def summarize_with_ai_language(text):
     client = TextAnalyticsClient(
         endpoint=DOCUMENT_INTELLIGENCE_ENDPOINT,  # Same endpoint (if enabled)
         credential=AzureKeyCredential(DOCUMENT_INTELLIGENCE_KEY)
+    )
     
     poller = client.begin_abstract_summary([text])
     result = poller.result()
