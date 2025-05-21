@@ -6,7 +6,6 @@ azure_location = "ENTER YOUR LOCATION"
 text_file = "Shakespeare.txt"
 wave_file = "Shakespeare.wav"
 
-The main code uses a try block:
 try:
     # Check if wave file exists
     with open(wave_file, 'rb') as f:
