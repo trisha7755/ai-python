@@ -1,13 +1,6 @@
+import os
 import azure.cognitiveservices.speech as speechsdk
 
-# Text to be converted to speech
-text_to_speak = """
-Here is the Python code for Azure speech recognition:
-
-First, we import the Azure Cognitive Services Speech module:
-import azure.cognitiveservices.speech as speechsdk
-
-Then we set up the configuration:
 azure_key = "ENTER YOUR KEY"
 azure_location = "ENTER YOUR LOCATION"
 text_file = "Shakespeare.txt"
