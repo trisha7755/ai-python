@@ -2,20 +2,29 @@ import requests
 import json
 
 class AzureAITranslator:
-    def __init__(self, endpoint, subscription_key):
+    def __init__(self, endpoint, subscription_key, region=None):
         """
-        Initialize the translator with Azure AI Foundry endpoint and subscription key
+        Initialize the translator with Azure AI Translator endpoint and subscription key
         
         Args:
-            endpoint (str): Azure AI Foundry endpoint URL
+            endpoint (str): Azure AI Translator endpoint URL
+                          (e.g., "https://api.cognitive.microsofttranslator.com")
             subscription_key (str): Subscription key for authentication
+            region (str): [Optional] Your Azure resource region (e.g., "eastus")
         """
-        self.endpoint = endpoint
+        # Clean up endpoint (remove trailing slash if present)
+        self.endpoint = endpoint.rstrip('/')
         self.subscription_key = subscription_key
+        self.region = region
+        
         self.headers = {
             'Ocp-Apim-Subscription-Key': self.subscription_key,
             'Content-Type': 'application/json',
         }
+        
+        # Add region to headers if provided (required for some endpoints)
+        if self.region:
+            self.headers['Ocp-Apim-Subscription-Region'] = self.region
         
     def translate(self, text, from_lang='en', to_lang='bn'):
         """
@@ -27,7 +36,7 @@ class AzureAITranslator:
             to_lang (str): Target language code (default: 'bn' for Bengali)
             
         Returns:
-            str: Translated text
+            str: Translated text or None if failed
         """
         # Construct the request body
         body = [{
@@ -59,21 +68,30 @@ class AzureAITranslator:
             return translated_text
             
         except requests.exceptions.RequestException as e:
-            print(f"Error during translation request: {e}")
+            print(f"Error during translation request: {str(e)}")
+            if hasattr(e, 'response') and e.response:
+                print(f"Status code: {e.response.status_code}")
+                print(f"Response: {e.response.text}")
             return None
         except (KeyError, IndexError) as e:
-            print(f"Error parsing translation response: {e}")
+            print(f"Error parsing translation response: {str(e)}")
             return None
 
 
-# Example usage
+# Example usage with corrected endpoint
 if __name__ == "__main__":
-    # Replace these with your actual Azure AI Foundry values
-    ENDPOINT = "https://api.example.cognitive.microsofttranslator.com"  # Your endpoint
-    SUBSCRIPTION_KEY = "your-subscription-key"  # Your subscription key
+    # Get these values from your Azure portal:
+    # 1. Go to your Translator resource
+    # 2. Look under "Keys and Endpoint"
+    ENDPOINT = "https://api.cognitive.microsofttranslator.com"  # Default global endpoint
+    # OR use your custom endpoint if you have one:
+    # ENDPOINT = "https://<your-resource-name>.cognitiveservices.azure.com/translator/text/v3.0"
+    
+    SUBSCRIPTION_KEY = "your-actual-subscription-key"  # Replace with your key
+    REGION = "eastus"  # Your resource region, e.g., "eastus", "westeurope", etc.
     
     # Initialize the translator
-    translator = AzureAITranslator(ENDPOINT, SUBSCRIPTION_KEY)
+    translator = AzureAITranslator(ENDPOINT, SUBSCRIPTION_KEY, REGION)
     
     # Text to translate
     english_text = "Hello, how are you today?"
