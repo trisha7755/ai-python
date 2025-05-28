@@ -14,7 +14,7 @@ constructed_url = endpoint + path
 params = {
     'api-version': '3.0',
     'from': 'en',
-    'to': ['fr', 'zu']
+    'to': 'bn'  # Changed to Bengali (bn) from French (fr) and Zulu (zu)
 }
 
 headers = {
