@@ -3,9 +3,10 @@ import requests
 import json
 
 def chat_with_gpt():
-    # Configuration with your provided details
-    endpoint = "https://your-resource-name.openai.azure.com"
-    api_key = "AbGolKx0PTYUPAR3GK6rYqB0RoeWU4x26i2mQ9bRFHXSCTIqiOq0JQQJ99BDAC4f1cMXJ3w3AAAAACOGwibK"
+    # Configuration with your provided details #
+    # Go To Azure AI Foundry Overview Page and Select Azure Open AI and Copy the EndPoint as follows.
+    endpoint = "https://project13318301334.openai.azure.com/"
+    api_key = "AbXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXGwibK"
     api_version = "2025-01-01-preview"
     
     # Headers for the API request
