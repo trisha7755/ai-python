@@ -1,3 +1,4 @@
+# This program will translate English to french with Azure AI Foundry Translate Playground key and Endpoint with specific region
 import os
 import requests
 import json
